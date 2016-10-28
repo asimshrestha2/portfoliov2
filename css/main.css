@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+*:focus{
+  outline: none;
+}
+
+@keyframes animate-out {
+  0%{ transform: translateX(0%); }
+  100%{ transform: translateX(-100%); }
+}
+
+@keyframes animate-in {
+  0%{ transform: translateX(100%); }
+  100%{ transform: translateX(0%); }
+}
+
+@keyframes animate-in-picture {
+  0%{ transform: translateX(100%); }
+  100%{ transform: translateX(0%); }
+}
+
+.panel.animate-in{
+  animation: animate-in 375ms ease-in-out;
+  display: block;
+}
+
+.panel.current .picture{
+  animation: animate-in-picture 470ms ease-in-out 100ms;
+  display: block;
+}
+
+.panel.animate-out{
+  animation: animate-out 375ms ease-in-out;
+  display: block;
+}
+
+.screen{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #212121;
+  background: linear-gradient(45deg, #78909C, #212121);
+  /* background: url('../imgs/overwatch/maxresdefault.jpg');
+  background-position: center;*/
+  overflow: hidden;
+}
+
+.panel{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.panel.current{
+  display: block;
+}
+
+.panel .picture{
+  position: relative;
+  width: 30vw;
+  height: 100%;
+  background: #EEEEEE;
+  overflow: hidden;
+}
+
+.picture img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  object-fit: contain;
+}
+
+.panel .text{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100%;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, .3);
+  overflow: auto;
+}
+
+.text .name{
+  padding: 120px 0 10px 20px;
+  font-size: 64px;
+}
+
+.text p{
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#control{
+  position: fixed;
+  top: 20px;
+  left: 21.5vw;
+  z-index: 999;
+}
+
+#control .btn{
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 10px 20px;
+  width: 100px;
+  height: 80px;
+  font-size: 18px;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 275ms ease-in-out;
+}
+
+#control .btn:hover{
+  background: #FFFFFF;
+  color: #212121;
+}
