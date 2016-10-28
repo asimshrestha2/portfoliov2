@@ -1,4 +1,4 @@
-var btnNames = [["Info", "./imgs/"], ["Work", "./imgs/"], ["Contact", "./imgs/"]];
+var btnNames = [["Info", "./imgs/btns/arm.png"], ["Work", "./imgs/btns/leaf.png"], ["Contact", "./imgs/btns/kepri.png"]];
 var current = 0;
 var previous = 0;
 window.onload = function() {
