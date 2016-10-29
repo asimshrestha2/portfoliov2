@@ -6,16 +6,16 @@ window.onload = function() {
   var control = document.getElementById('control');
   for (var i = 0; i < panels.length; i++) {
     panels[i].arry_id = i;
-    control.innerHTML += '<div class="btn" style="background: url(\''+btnNames[i][1]+'\'); background-size: cover;">'+btnNames[i][0]+'</div>';
+    control.innerHTML += '<a href="#" class="btn"><div class="btn_c" style="background: url(\''+btnNames[i][1]+'\'); background-size: cover;">'+btnNames[i][0]+'</div></a>';
   }
 
-  var btns = document.getElementsByClassName('btn');
+  var btns = document.getElementsByClassName('btn_c');
   for (var i = 0; i < btns.length; i++) {
     btns[i].arry_id = i;
     btns[i].addEventListener('click', function(e){
       var i = e.target.arry_id;
       //console.log(btnNames[i][1]);
-      //console.log(i);
+      console.log(i);
       previous = current;
       if (!panels[i].className.includes('current')) {
         panels[i].classList.add('animate-in');

@@ -23,6 +23,10 @@
   100%{ transform: translateX(0%); }
 }
 
+a{
+  text-decoration: none;
+}
+
 .panel.animate-in{
   animation: animate-in 375ms ease-in-out;
   display: block;
@@ -108,20 +112,23 @@
   z-index: 999;
 }
 
-#control .btn{
+.btn{
+  display: block;
   float: left;
   margin: 0 10px 0 0;
+}
+
+#control .btn_c{
   padding: 10px 20px;
   width: 100px;
   height: 80px;
   font-size: 18px;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
-  cursor: pointer;
   transition: all 275ms ease-in-out;
 }
 
-#control .btn:hover{
+#control .btn_c:hover{
   background: #FFFFFF;
   color: #212121;
 }
@@ -139,9 +146,12 @@
     width: 100%;
     display: flex;
   }
+  #control .btn{
+    width: inherit;
+    margin: 0;
+  }
 
-  #control .btn {
-    float: left;
+  #control .btn_c{
     margin: 0;
     padding: 10px 20px;
     width: inherit;
@@ -153,22 +163,22 @@
 
   .screen {
     position: relative;
-    width: 100%;
-    height: auto;
-    overflow: inherit;
+    overflow-y: auto;
   }
 
   .panel {
-    position: relative;
-    top: auto;
     width: 100%;
-    height: 100%;
+    overflow: inherit;
   }
 
   .panel .picture {
     position: relative;
     width: 100%;
     height: 500px;
+  }
+
+  .panel.current .picture {
+    animation: none;
   }
 
   .panel .text {
