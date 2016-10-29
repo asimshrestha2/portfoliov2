@@ -17,7 +17,7 @@ window.onload = function() {
       //console.log(btnNames[i][1]);
       console.log(i);
       previous = current;
-      if (!panels[i].className.includes('current')) {
+      if (!(panels[i].className.indexOf('current') >= 0)) {
         panels[i].classList.add('animate-in');
         panels[i].classList.add('current');
         if(current < panels.length){
@@ -26,11 +26,11 @@ window.onload = function() {
         }
         setTimeout(function () {
           for (var i = 0; i < panels.length; i++) {
-            if (panels[i].className.includes('animate-in')) {
+            if (panels[i].className.indexOf('animate-in') >= 0) {
               panels[i].classList.remove('animate-in');
             }
 
-            if (panels[i].className.includes('animate-out')) {
+            if (panels[i].className.indexOf('animate-out') >= 0) {
               panels[i].classList.remove('animate-out');
             }
           }
