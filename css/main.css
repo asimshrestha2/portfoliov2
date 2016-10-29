@@ -125,3 +125,65 @@
   background: #FFFFFF;
   color: #212121;
 }
+
+#asiman{
+  transform: translateX(-25%);
+  left: 0;
+}
+
+@media screen and (max-width: 720px) {
+  #control {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  #control .btn {
+    float: left;
+    margin: 0;
+    padding: 10px 20px;
+    width: inherit;
+    height: 45px;
+    font-size: 18px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  .screen {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: inherit;
+  }
+
+  .panel {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .panel .picture {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+
+  .panel .text {
+    position: static;
+    top: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, .3);
+    overflow: auto;
+  }
+
+  #asiman{
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
