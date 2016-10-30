@@ -108,16 +108,21 @@ a:hover{
   font-size: 64px;
 }
 
-.text p{
+.text p, #pic-credit, #titles, #socal-text{
   padding: 10px 20px;
-  font-size: 24px;
   font-weight: 300;
 }
 
+#pic-credit{
+  font-size: 18px;
+}
+
+.text p{
+  font-size: 24px;
+}
+
 #titles{
-  padding: 10px 20px;
   font-size: 42px;
-  font-weight: 300;
 }
 
 #titles ul{
@@ -166,6 +171,18 @@ a:hover{
 .social img{
   width: 35px;
   padding: 20px 5px;
+}
+
+#socal-text ul{
+  list-style: none;
+}
+
+#socal-text b{
+  font-weight: 400;
+}
+
+#socal-text li{
+  font-size: 24px;
 }
 
 .flex-container{
